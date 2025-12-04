@@ -3,6 +3,14 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var mongoose = require('mongoose'); 
+
+// Connect to MongoDB Atlas
+mongoose.connect(mongodb+srv://tempestm324_db_user:51qsRUdLBbd9O8wJ@cluster0.xxxxx.mongodb.net/storedlist
+
+)
+  .then(() => console.log('MongoDB Connected'))
+  .catch(err => console.log(err));
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
